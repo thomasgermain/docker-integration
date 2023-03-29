@@ -3,6 +3,12 @@
 
 # Docker monitor integration
 
+## About
+
+This integration allows you to follow your docker containers.
+This is based on the work
+of [ualex73](https://github.com/ualex73/): [monitor_docker](https://github.com/ualex73/monitor_docker)
+
 ## Installation
 
 - Through HACS [custom repositories](https://hacs.xyz/docs/faq/custom_repositories/) !
@@ -14,13 +20,16 @@ Configuration is done through the UI. Only parameter is the URL of the docker se
 You can also configure the refresh rate, this is 30 seconds by default.
 
 ## Changelog
+
 See [releases details](https://github.com/thomasgermain/docker-integration/releases)
 
 ## Provided data
+
 For each container following data are provided
+
 - container status (running or not running)
 - buttons to start, stop and restart a container
-if the container is running:
+  if the container is running:
 - start time
 - used cpu percentage
 - used memory percentage
@@ -28,7 +37,6 @@ if the container is running:
 - memory limit
 - total network tx
 - total network rx
-
 
 ---
 <a href="https://www.buymeacoffee.com/tgermain" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
