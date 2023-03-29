@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "url": "URL"
+        },
+        "title": "URL of the docker instance"
+      }
+    },
+    "error": {
+      "invalid_url": "Invalid Docker URL",
+      "unknown": "Unexpected error"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "scan_interval": "Seconds between scans"
+        }
+      }
+    }
+  }
+}
