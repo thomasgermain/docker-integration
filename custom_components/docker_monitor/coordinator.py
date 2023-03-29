@@ -112,8 +112,6 @@ class DockerMonitorCoordinator(DataUpdateCoordinator):
     async def _refresh(self):
         containers_data = {container.name: {} for container in self._containers}
         try:
-            need_refresh = False
-
             for container, stats in self._monitors.items():
                 containers_data[container.name]["id"] = container.attrs["Id"]
                 containers_data[container.name]["status"] = container.status
@@ -126,7 +124,6 @@ class DockerMonitorCoordinator(DataUpdateCoordinator):
                     )
 
                     stat = DockerMonitorCoordinator._skip_old_stat(stats)
-                    need_refresh = stat is None or need_refresh
 
                     if stat:
                         cpu_new = DockerMonitorCoordinator._cpu_compute(
@@ -143,9 +140,6 @@ class DockerMonitorCoordinator(DataUpdateCoordinator):
             _LOGGER.debug("new data are %s", containers_data)
             self._old_data = containers_data
 
-            if need_refresh:
-                self.logger.debug("Some refresh needed")
-                await self._init()
         except Exception:  # pylint: disable=broad-except
             await self._refresh_docker_client()
             await self._init()
