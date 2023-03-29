@@ -1,0 +1,16 @@
+{
+  "domain": "docker_monitor",
+  "name": "Docker monitor",
+  "codeowners": ["@thomasgermain"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/thomasgermain/docker-integration",
+  "homekit": {},
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/thomasgermain/docker-integration/issues",
+  "requirements": ["docker==6.0.1"],
+  "ssdp": [],
+  "zeroconf": [],
+  "version": "0.0.1"
+}
