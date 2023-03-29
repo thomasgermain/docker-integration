@@ -1,5 +1,5 @@
 {
-  "name": "docker_monitor",
+  "name": "Docker monitor",
   "render_readme": true,
   "homeassistant": "2023.3.0"
 }
