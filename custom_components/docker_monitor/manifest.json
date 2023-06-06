@@ -12,5 +12,5 @@
   "requirements": ["docker==6.0.1"],
   "ssdp": [],
   "zeroconf": [],
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

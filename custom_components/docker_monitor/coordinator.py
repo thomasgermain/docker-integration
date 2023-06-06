@@ -223,6 +223,7 @@ class DockerMonitorCoordinator(DataUpdateCoordinator):
     @staticmethod
     def _to_date(date_str: str) -> datetime:
         to_parse = date_str[:-4] + date_str[-1:]
+        to_parse = to_parse.replace('.Z', '.0Z')
         return datetime.strptime(to_parse, "%Y-%m-%dT%H:%M:%S.%fZ").replace(
             tzinfo=timezone.utc
         )
